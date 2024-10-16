@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepare the future for a genius - Authar</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!-- bootstrap-icon -->
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- media -->
+    <link rel="stylesheet" href="css/media.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="loader"></div>
+
+    <!-- header -->
+
+    <header>
+        <nav class="navbar navbar-main navbar-expand-lg p-0">
+            <div class="container-fluid">
+
+                <button class="sticky btn modal-btn border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+
+                <div class="col-1 icon">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="mx-3"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="col-10 d-flex justify-content-center">
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="dropdown">
+                                <a class="btn p-0 border-0" role="button">
+                                    Pages<i class="bi bi-chevron-down ms-2"></i>
+                                </a>
+                                <ul class="dropdown-menu py-0 rounded-0 border-0">
+                                    <li><a class="dropdown-item border-bottom" href="list.html">List authors</a></li>
+                                    <li><a class="dropdown-item border-bottom" href="faq.html">Faq</a></li>
+                                    <li><a class="dropdown-item" href="error.html">404 error</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+
+                    <!-- logo -->
+                    <!-- black logo -->
+                    <a href="index.html" class="logo default-logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                    <!-- white logo -->
+                    <a href="index.html" class="logo sticky-logo" style="display: none;">
+                        <img src="img/sticky-logo.svg" alt="">
+                    </a>
+                    <!-- logo-end -->
+
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="price.html">Pricing</a>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1 d-flex justify-content-end">
+                    <button type="button" class="btn border-0 p-0 search-btn" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-magnifying-glass fs-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-grid align-items-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex border-0 border-1 border-bottom w-50">
+                            <input type="text" id="searchInput" placeholder="Search ..."
+                                class="text-white form-control border-0 rounded-0">
+                            <a href="#" class="icon px-4 py-3" id="searchButton">
+                                <i class="fa-solid fa-magnifying-glass text-white fs-6"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- offcanvas -->
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="index.html">Home</a>
+            <!-- dropdown start-->
+            <div class="dropdown">
+                <span class="text-white">Pages</span>
+                <a class="btn border-0 p-0 py-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-chevron-down ms-5 text-white"></i>
+                </a>
+                <div class="border-bottom border-gary"></div>
+                <ul class="dropdown-menu py-0 rounded-0 border-0"
+                    style="transform: translate(-37rem, 52px) !important;">
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="list.html">List authors</a></li>
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="faq.html">Faq</a></li>
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="error.html">404 error</a></li>
+                </ul>
+            </div>
+            <!-- dropdown end -->
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="blog.html">Blog</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="price.html">Pricing</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="about.html">About</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page"
+                href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- main -->
+
+    <main class="overflow-x-hidden">
+
+        <!-- blog6 -->
+
+        <section class="blog-inner blog-top">
+            <div class="blog-img d-flex justify-content-center wow fadeIn">
+                <img src="img/blog-06.jpg" alt="">
+            </div>
+            <div class="container pb-0">
+                <div class="row">
+
+                    <h3 class="text-capitalize">Prepare the future for a genius</h3>
+                    <div class="part d-flex">
+                        <img src="img/blog-inner.jpg" alt="" class="rounded-circle me-2">
+                        <a href="index.html" class="text-decoration-none text-black">
+                            <p class="m-0">By Code4rest</p>
+                        </a>
+                        <p class="m-0"><span>October 04, 2024</span></p>
+                        <a href="uncategorized.html" class="text-decoration-none un-btn"><span
+                                class="text-black pe-0">Uncategorized</span></a>
+                        <a href="#comment" class="text-decoration-none text-black">
+                            <p class="m-0">0 Comments </p>
+                        </a>
+                    </div>
+
+                    <p class="mt-4">It is a long established fact that will be distracted by the readab.</p>
+
+                    <div class="row sec-row">
+                        <div class="col-8">
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nemo enim ipsam
+                                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                                dolores eos qui ratione voluptatem sequi nesciunt. Nemo enim ipsam voluptatem quia
+                                voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                                ratione voluptatem sequi nesciunt.</p>
+
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="img">
+                                <img src="img/blog-03.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row sec-row">
+                        <div class="col-4">
+                            <div class="img">
+                                <img src="img/blog-01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                                ratione voluptatem sequi nesciunt. Praesent venenatis ultricies erat. Nunc fringilla
+                                eros vitae nisl posuere, ut consectetur nulla feugiat. Nullam ut mauris vitae tortor
+                                sodales efficitur. Quisque ac orci ante.</p>
+
+                            <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. </p>
+                        </div>
+                    </div>
+
+                    <p class="mb-0">Praesent venenatis ultricies erat. Nunc fringilla eros vitae nisl posuere, ut
+                        consectetur nulla feugiat. Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci
+                        ante. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- next -->
+
+        <section class="next">
+            <div class="container">
+                <div class="row pb-5">
+                    <div class="col-6"></div>
+                    <div class="col-6 text-end">
+                        <a href="blog5.html" class="text-decoration-none">
+                            <p class="icon mb-2 text-uppercase">Next<i class="bi bi-arrow-right ms-2"></i></p>
+                            <p class="m-0">Proin “sit amet turpis lobortis”, imperdiet nisi ut, viverra</p>
+                        </a>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- reply -->
+
+        <section class="reply pt-3 pb-5 mb-5" id="comment">
+            <div class="container">
+                <div class="row mb-5">
+                    <h4 class="text-uppercase">Leave a Reply</h4>
+                    <form>
+                        <p>Your email address will not be published. Required fields are marked<span class="mx-2"
+                                style="color: #d54e21;">*</span></p>
+                        <label class="form-label">Comment<span class="mx-2" style="color: #d54e21;">*</span></label>
+                        <textarea class="px-2 border-1 w-100" style="border-color: #6f6f6f36; padding: .7rem 0 8rem;"
+                            required></textarea>
+                        <div class="row my-4" style="margin: 0;">
+                            <div class="col-4 px-0">
+                                <label class="form-label">Name<span class="mx-2"
+                                        style="color: #d54e21;">*</span></label>
+                                <input class="p-2 border-1 border-bottom w-100" style="border-color: #6f6f6f36;"
+                                    type="text" required>
+                            </div>
+                            <div class="col-4 px-4">
+                                <label class="form-label">Emali<span class="mx-2"
+                                        style="color: #d54e21;">*</span></label>
+                                <input class="p-2 border-1 border-bottom w-100" style="border-color: #6f6f6f36;"
+                                    type="email" required>
+                            </div>
+                            <div class="col-4 px-0">
+                                <label class="form-label">Website<span class="mx-2"
+                                        style="color: #d54e21;">*</span></label>
+                                <input class="p-2 border-1 border-bottom w-100" style="border-color: #6f6f6f36;"
+                                    type="text" required>
+                            </div>
+                        </div>
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" required>
+                            <label class="form-check-label">Save my name, email, and website in this
+                                browser for the next time I comment.</label>
+                        </div>
+                        <button type="submit" class="btn rounded-0 text-uppercase">post
+                            comment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+
+    <section class="footer bg-gray">
+        <div class="container all-padding">
+            <div class="row info">
+
+                <div class="col-3 hide-footer">
+                    <h4 class="text-white">Connect</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item text-white mb-3">Arp-48 Mor Street, Brooklyn, <br> NY 11201, UK</li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">(+1)
+                                585-310-205</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="text-decoration-none">Info@Author.Com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion1 -->
+                   <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterOne" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterOne">
+                                    Connect
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterOne" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item text-white mb-3">Arp-48 Mor Street, Brooklyn, <br> NY
+                                            11201, UK</li>
+                                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">(+1)
+                                                585-310-205</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="#"
+                                                class="text-decoration-none">Info@Author.Com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 main-col hide-footer">
+                    <h4 class="text-white">Info</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item"><a href="about.html" class="text-decoration-none">About Us</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">History</a>
+                        </li>
+                        <li class="list-group-item"><a href="faq.html" class="text-decoration-none">Faq</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="blog.html" class="text-decoration-none">Blog</a>
+                        </li>
+                        <li class="list-group-item"><a href="contact.html" class="text-decoration-none">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion2 -->
+                <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterTwo">
+                                    Info
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item"><a href="about.html"
+                                                class="text-decoration-none">About Us</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">History</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="faq.html"
+                                                class="text-decoration-none">Faq</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="blog.html"
+                                                class="text-decoration-none">Blog</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="contact.html"
+                                                class="text-decoration-none">Contact
+                                                Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 hide-footer">
+                    <h4 class="text-white">Links</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item"><a href="#" class="text-decoration-none text-capitalize">Affiliate
+                                Program</a></li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">Business Services</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">Education Services</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="text-decoration-none">Gift Car</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion3 -->
+                  <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterThree">
+                                    Links
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterThree" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item"><a href="#"
+                                                class="text-decoration-none text-capitalize">Affiliate
+                                                Program</a></li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">Business Services</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">Education Services</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Gift
+                                                Car</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 hide-footer">
+                    <h4 class="text-white">Coming Soon</h4>
+                    <div class="img">
+                        <img src="img/comming-01.jpg" alt="">
+                    </div>
+                    <div class="img mt-4">
+                        <img src="img/comming-02.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- accordion4 -->
+                 <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterFour" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterFour">
+                                    Coming Soon
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterFour" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <div class="img">
+                                        <img src="img/comming-01.jpg" alt="">
+                                    </div>
+                                    <div class="img mt-4">
+                                        <img src="img/comming-02.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <span class="border-top border-footer"></span>
+                <div class="col-12 my-4 d-flex justify-content-center text-white">
+                    <p class="mb-0">© 2024 - Html Theme by Code4rest</p>
+                </div>
+            </div>
+            <div class="fix-btn">
+                <a href="#" class="btn position-fixed rounded-0 border border-1 border-white">
+                    <i class="bi bi-chevron-up text-white"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- all -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+   <!-- loader -->
+    <script src="js/loader.js"></script>
+
+    <!-- header -->
+    <script src="js/header.js"></script>
+
+</body>
+
+</html>

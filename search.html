@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results for "" - Authar</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/docs.css">
+
+    <!-- bootstrap-icon -->
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- owl-carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- media -->
+    <link rel="stylesheet" href="css/media.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="loader"></div>
+
+    <!-- header -->
+
+    <header>
+        <nav class="navbar navbar-main navbar-expand-lg p-0">
+            <div class="container-fluid">
+
+                <button class="sticky btn modal-btn border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+
+                <div class="col-1 icon">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="mx-3"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="col-10 d-flex justify-content-center">
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="dropdown">
+                                <a class="btn p-0 border-0" role="button">
+                                    Pages<i class="bi bi-chevron-down ms-2"></i>
+                                </a>
+                                <ul class="dropdown-menu py-0 rounded-0 border-0">
+                                    <li><a class="dropdown-item border-bottom" href="list.html">List authors</a></li>
+                                    <li><a class="dropdown-item border-bottom" href="faq.html">Faq</a></li>
+                                    <li><a class="dropdown-item" href="error.html">404 error</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+
+                    <!-- logo -->
+                    <!-- black logo -->
+                    <a href="index.html" class="logo default-logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                    <!-- white logo -->
+                    <a href="index.html" class="logo sticky-logo" style="display: none;">
+                        <img src="img/sticky-logo.svg" alt="">
+                    </a>
+                    <!-- logo-end -->
+
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="price.html">Pricing</a>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1 d-flex justify-content-end">
+                    <button type="button" class="btn border-0 p-0 search-btn" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-magnifying-glass fs-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-grid align-items-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex border-0 border-1 border-bottom w-50">
+                            <input type="text" id="searchInput" placeholder="Search ..."
+                                class="text-white form-control border-0 rounded-0">
+                            <a href="#" class="icon px-4 py-3" id="searchButton">
+                                <i class="fa-solid fa-magnifying-glass text-white fs-6"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- offcanvas -->
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="index.html">Home</a>
+            <!-- dropdown start-->
+            <div class="dropdown">
+                <span class="text-white">Pages</span>
+                <a class="btn border-0 p-0 py-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-chevron-down ms-5 text-white"></i>
+                </a>
+                <div class="border-bottom border-gary"></div>
+                <ul class="dropdown-menu py-0 rounded-0 border-0"
+                    style="transform: translate(-37rem, 52px) !important;">
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="list.html">List authors</a></li>
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="faq.html">Faq</a></li>
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="error.html">404 error</a></li>
+                </ul>
+            </div>
+            <!-- dropdown end -->
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="blog.html">Blog</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="price.html">Pricing</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="about.html">About</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page"
+                href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- top -->
+
+    <section class="top top-bg wow fadeIn search" data-wow-duration="1s">
+        <div class="top-text">
+            <div class="text-inner">
+                <h2 class="text-uppercase text-white">Search Results for: <span id="searchResult"></span></h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- section -->
+
+    <section class="section all-margin">
+        <div class="container">
+
+            <!-- 1 -->
+            <div class="row">
+
+                <div class="col-4 img wow fadeInLeft" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img">
+                            <a href="list.html"><img src="img/bred.jpg" alt="" class="object-fit-cover"></a>
+                        </div>
+                        <div class="text">
+                            <a href="list.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mt-0 mb-3">List authors</h4>
+                            </a>
+                            <div class="d-flex">
+                                <a href="index.html" class="text-decoration-none text-black">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">Bo Eriksson 3 Published Book Dan Gordon 5 Published Book Gunvor Hofmo 5
+                                Published Book…
+                            </p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="list.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 blog-sec img wow fadeInUp mt-320-1-5" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img blog-img-sec">
+                            <a href="blog1.html">
+                                <img src="img/blog-01.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a class="btn border-0 p-0 text-decoration-none Uncategorized-btn mb-2"
+                                href="uncategorized.html" role="button">Uncategorized</a>
+                            <a href="blog1.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mb-3">Laurie Petrou on editing her debut novel</h4>
+                            </a>
+                            <div class="d-flex color">
+                                <a href="index.html" class="text-decoration-none color">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">It is a long established fact that will be distracted by the readab.
+                                Praesent venenatis…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="blog1.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 blog-sec img wow fadeInRight mt-768-1-5" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img blog-img-sec">
+                            <a href="blog2.html">
+                                <img src="img/blog-02.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a class="btn border-0 p-0 text-decoration-none Uncategorized-btn mb-2"
+                                href="uncategorized.html" role="button">Uncategorized</a>
+                            <a href="blog2.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mb-3">“Norte” – The book was sold with the biggest edition
+                                </h4>
+                            </a>
+                            <div class="d-flex color">
+                                <a href="index.html" class="text-decoration-none color">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">It is a long established fact that will be distracted by the readab. Quis
+                                autem…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="blog2.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 2 -->
+            <div class="row my-5">
+
+                <div class="col-4 blog-sec img wow fadeInLeft" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img blog-img-sec">
+                            <a href="blog3.html">
+                                <img src="img/blog-03.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a class="btn border-0 p-0 text-decoration-none Uncategorized-btn mb-2"
+                                href="uncategorized.html" role="button">Uncategorized</a>
+                            <a href="blog3.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mb-3">Tell me who you are, I’ll tell you what to drink</h4>
+                            </a>
+                            <div class="d-flex color">
+                                <a href="index.html" class="text-decoration-none color">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">It is a long established fact that will be distracted by the readab. Nemo
+                                enim…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="blog3.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 blog-sec img wow fadeInUp mt-320-1-5" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img blog-img-sec">
+                            <a href="blog4.html">
+                                <img src="img/blog-04.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a class="btn border-0 p-0 text-decoration-none Uncategorized-btn mb-2"
+                                href="uncategorized.html" role="button">Uncategorized</a>
+                            <a href="blog14html" class="text-decoration-none">
+                                <h4 class="text-capitalize mb-3">Space for effective reading after hours</h4>
+                            </a>
+                            <div class="d-flex color">
+                                <a href="index.html" class="text-decoration-none color">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">It is a long established fact that will be distracted by the readab.
+                                Praesent venenatis…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="blog14html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 blog-sec img wow fadeInRight mt-768-1-5" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img blog-img-sec">
+                            <a href="blog5.html">
+                                <img src="img/blog-05.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a class="btn border-0 p-0 text-decoration-none Uncategorized-btn mb-2"
+                                href="uncategorized.html" role="button">Uncategorized</a>
+                            <a href="blog5.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mb-3">Proin “sit amet turpis lobortis”, imperdiet nisi ut,
+                                    viverra</h4>
+                            </a>
+                            <div class="d-flex color">
+                                <a href="index.html" class="text-decoration-none color">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">It is a long established fact that will be distracted by the readab.
+                                voluptate velit esse…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="blog5.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 3 -->
+            <div class="row">
+
+                <div class="col-4 blog-sec img wow fadeInLeft" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img blog-img-sec">
+                            <a href="blog6.html">
+                                <img src="img/blog-06.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a class="btn border-0 p-0 text-decoration-none Uncategorized-btn mb-2"
+                                href="uncategorized.html" role="button">Uncategorized</a>
+                            <a href="blog6.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mb-3">Prepare the future for a genius</h4>
+                            </a>
+                            <div class="d-flex color">
+                                <a href="index.html" class="text-decoration-none color">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">It is a long established fact that will be distracted by the readab. Nemo
+                                enim…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="blog6.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 img wow fadeInUp mt-320-1-5" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="text">
+                            <a href="error.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mt-0 mb-3">404 error</h4>
+                            </a>
+                            <div class="d-flex mt-3">
+                                <a href="index.html" class="text-decoration-none text-black">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">404 Woops, looks like this page does not exist You could either go back or…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="error.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 img wow fadeInRight  mt-768-1-5" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img">
+                            <a href="faq.html"><img src="img/bred.jpg" alt="" class="object-fit-cover"></a>
+                        </div>
+                        <div class="text">
+                            <a href="faq.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mt-0 mb-3">Faq</h4>
+                            </a>
+                            <div class="d-flex mt-3">
+                                <a href="index.html" class="text-decoration-none text-black">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">01. The order When do I receive my order? When placing the order, a day…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="faq.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 4 -->
+            <div class="row my-5">
+
+                <div class="col-4 img wow fadeInLeft" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img">
+                            <a href="about.html"><img src="img/bred.jpg" alt="" class="object-fit-cover"></a>
+                        </div>
+                        <div class="text">
+                            <a href="about.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mt-0 mb-3">About us</h4>
+                            </a>
+                            <div class="d-flex mt-3">
+                                <a href="index.html" class="text-decoration-none text-black">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">Welcom to Auteur a monthly books review publication Imagine two men facing each other, pointing…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="about.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 img wow fadeInUp mt-320-1-5" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="text">
+                            <a href="contact.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mt-0 mb-3">Contact us</h4>
+                            </a>
+                            <div class="d-flex mt-3">
+                                <a href="index.html" class="text-decoration-none text-black">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">Our Stores Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius incididunt ut…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="contact.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 img wow fadeInRight mt-768-1-5" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="inner-img">
+                            <a href="price.html"><img src="img/bred.jpg" alt="" class="object-fit-cover"></a>
+                        </div>
+                        <div class="text">
+                            <a href="price.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mt-0 mb-3">Pricing</h4>
+                            </a>
+                            <div class="d-flex mt-3">
+                                <a href="index.html" class="text-decoration-none text-black">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <p class="mb-2">Basic $ 89 Excepteur sint occaecat Nor again is there Et harum quidem Quis autem…</p>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="price.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 5 -->
+            <div class="row">
+
+                <div class="col-4 img wow fadeInLeft" data-wow-duration="1s">
+                    <div class="img">
+                        <div class="text">
+                            <a href="blog.html" class="text-decoration-none">
+                                <h4 class="text-capitalize mt-0 mb-3">Blog</h4>
+                            </a>
+                            <div class="d-flex mt-3">
+                                <a href="index.html" class="text-decoration-none text-black">
+                                    <p class="mb-2">By Code4rest</p>
+                                </a>
+                                <span class="d-flex">
+                                    October 04, 2024
+                                </span>
+                            </div>
+                            <a class="btn border-0 p-0 text-decoration-underline" href="blog.html" role="button">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 img wow fadeInUp mt-320-1-5" data-wow-duration="1s">
+                    <div class="text">
+                        <a href="index.html" class="text-decoration-none text-black">
+                            <h4 class="text-capitalize mt-0 mb-3">Home</h4>
+                        </a>
+                        <div class="d-flex mt-3">
+                            <a href="index.html" class="text-decoration-none text-black">
+                                <p class="mb-2">By Code4rest</p>
+                            </a>
+                            <span class="d-flex">
+                                October 04, 2024
+                            </span>
+                        </div>
+                        <p>Chapter 2 Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do eiusmod tempor incididunt…</p>
+                        <a class="btn border-0 p-0 text-decoration-underline" href="index.html" role="button">Read
+                            More</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row d-grid justify-content-center mt-5">
+                <p class="mb-0">End of content</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <section class="footer bg-gray">
+        <div class="container all-padding">
+            <div class="row info">
+
+                <div class="col-3 hide-footer">
+                    <h4 class="text-white">Connect</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item text-white mb-3">Arp-48 Mor Street, Brooklyn, <br> NY 11201, UK</li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">(+1)
+                                585-310-205</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="text-decoration-none">Info@Author.Com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion1 -->
+                   <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterOne" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterOne">
+                                    Connect
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterOne" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item text-white mb-3">Arp-48 Mor Street, Brooklyn, <br> NY
+                                            11201, UK</li>
+                                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">(+1)
+                                                585-310-205</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="#"
+                                                class="text-decoration-none">Info@Author.Com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 main-col hide-footer">
+                    <h4 class="text-white">Info</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item"><a href="about.html" class="text-decoration-none">About Us</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">History</a>
+                        </li>
+                        <li class="list-group-item"><a href="faq.html" class="text-decoration-none">Faq</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="blog.html" class="text-decoration-none">Blog</a>
+                        </li>
+                        <li class="list-group-item"><a href="contact.html" class="text-decoration-none">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion2 -->
+                <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterTwo">
+                                    Info
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item"><a href="about.html"
+                                                class="text-decoration-none">About Us</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">History</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="faq.html"
+                                                class="text-decoration-none">Faq</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="blog.html"
+                                                class="text-decoration-none">Blog</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="contact.html"
+                                                class="text-decoration-none">Contact
+                                                Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 hide-footer">
+                    <h4 class="text-white">Links</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item"><a href="#" class="text-decoration-none text-capitalize">Affiliate
+                                Program</a></li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">Business Services</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">Education Services</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="text-decoration-none">Gift Car</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion3 -->
+                  <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterThree">
+                                    Links
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterThree" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item"><a href="#"
+                                                class="text-decoration-none text-capitalize">Affiliate
+                                                Program</a></li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">Business Services</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">Education Services</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Gift
+                                                Car</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 hide-footer">
+                    <h4 class="text-white">Coming Soon</h4>
+                    <div class="img">
+                        <img src="img/comming-01.jpg" alt="">
+                    </div>
+                    <div class="img mt-4">
+                        <img src="img/comming-02.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- accordion4 -->
+                 <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterFour" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterFour">
+                                    Coming Soon
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterFour" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <div class="img">
+                                        <img src="img/comming-01.jpg" alt="">
+                                    </div>
+                                    <div class="img mt-4">
+                                        <img src="img/comming-02.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <span class="border-top border-footer"></span>
+                <div class="col-12 my-4 d-flex justify-content-center text-white">
+                    <p class="mb-0">© 2024 - Html Theme by Code4rest</p>
+                </div>
+            </div>
+            <div class="fix-btn">
+                <a href="#" class="btn position-fixed rounded-0 border border-1 border-white">
+                    <i class="bi bi-chevron-up text-white"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- all -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+   <!-- loader -->
+    <script src="js/loader.js"></script>
+
+    <!-- header -->
+    <script src="js/header.js"></script>
+
+    <script>
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const query = getQueryParameter('query');
+        document.getElementById('searchResult').textContent = query;
+
+        // Update the title
+        document.title = `Search Results for "${query}" - Authar`;
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authar</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/docs.css">
+
+    <!-- bootstrap-icon -->
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- owl-carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- media -->
+    <link rel="stylesheet" href="css/media.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="loader"></div>
+
+    <!-- header -->
+
+    <header>
+        <nav class="navbar navbar-main navbar-expand-lg p-0">
+            <div class="container-fluid">
+
+                <button class="sticky btn modal-btn border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+
+                <div class="col-1 icon">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="mx-3"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="col-10 d-flex justify-content-center">
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="index.html" class="color">Home</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="dropdown">
+                                <a class="btn p-0 border-0" role="button">
+                                    Pages<i class="bi bi-chevron-down ms-2"></i>
+                                </a>
+                                <ul class="dropdown-menu py-0 rounded-0 border-0">
+                                    <li><a class="dropdown-item border-bottom" href="list.html">List authors</a></li>
+                                    <li><a class="dropdown-item border-bottom" href="faq.html">Faq</a></li>
+                                    <li><a class="dropdown-item" href="error.html">404 error</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+
+                    <!-- logo -->
+                    <!-- black logo -->
+                    <a href="index.html" class="logo default-logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                    <!-- white logo -->
+                    <a href="index.html" class="logo sticky-logo" style="display: none;">
+                        <img src="img/sticky-logo.svg" alt="">
+                    </a>
+                    <!-- logo-end -->
+
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="price.html">Pricing</a>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1 d-flex justify-content-end">
+                    <button type="button" class="btn border-0 p-0 search-btn" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-magnifying-glass fs-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-grid align-items-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex border-0 border-1 border-bottom w-50">
+                            <input type="text" id="searchInput" placeholder="Search ..."
+                                class="text-white form-control border-0 rounded-0">
+                            <a href="#" class="icon px-4 py-3" id="searchButton">
+                                <i class="fa-solid fa-magnifying-glass text-white fs-6"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- offcanvas -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a class="nav-link active py-3 border-bottom border-gary color" aria-current="page"
+                href="index.html">Home</a>
+            <!-- dropdown start-->
+            <div class="dropdown">
+                <span class="text-white">Pages</span>
+                <a class="btn border-0 p-0 py-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-chevron-down ms-5 text-white"></i>
+                </a>
+                <div class="border-bottom border-gary"></div>
+                <ul class="dropdown-menu py-0 rounded-0 border-0"
+                    style="transform: translate(-37rem, 52px) !important;">
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="list.html">List authors</a></li>
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="faq.html">Faq</a></li>
+                    <li><a class="dropdown-item border-bottom border-gary py-3" href="error.html">404 error</a></li>
+                </ul>
+            </div>
+            <!-- dropdown end -->
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="blog.html">Blog</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="price.html">Pricing</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page" href="about.html">About</a>
+            <a class="nav-link active py-3 border-bottom border-gary" aria-current="page"
+                href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- banner -->
+
+    <section class="banner">
+        <div class="owl-carousel owl-theme owl-carousel-1 owl-loaded owl-drag">
+            <div class="owl-stage-outer">
+                <div class="owl-stage"
+                    style="transform: translate3d(-5850px, 0px, 0px); transition: 0.25s; width: 11700px;">
+
+                    <div class="owl-item cloned" style="width: 1920px; margin-right: 30px;">
+                        <div class="item">
+                            <div class="card border-0 wow fadeIn" style="visibility: visible;">
+                                <img src="img/slider-01.jpg" alt=""
+                                    class="card-img slider-img rounded-0 object-fit-cover">
+                                <div class="card-img-overlay">
+                                    <div class="img-inner wow fadeInLeftBig" style="visibility: visible;">
+                                        <div class="text">
+                                            <h5 class="text-uppercase text-white">quick &amp; easy for you</h5>
+                                            <h2 class="text-uppercase text-white">you looking <br> for easier.</h2>
+                                            <a href="#" class="text-decoration-none">
+                                                <div
+                                                    class="btn border-0 rounded-0 p-0 d-flex justify-content-center align-items-center">
+                                                    buy now</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="owl-item cloned" style="width: 1920px; margin-right: 30px;">
+                        <div class="item">
+                            <div class="card border-0 wow fadeIn" style="visibility: visible;">
+                                <img src="img/slider-02.jpg" alt=""
+                                    class="card-img rounded-0 slider-img object-fit-cover">
+                                <div class="card-img-overlay">
+                                    <div class="img-inner wow fadeInLeftBig" style="visibility: visible;">
+                                        <div class="text">
+                                            <h5 class="text-uppercase text-white">quick &amp; easy for you</h5>
+                                            <h2 class="text-uppercase text-white">published work <br> of literature</h2>
+                                            <a href="#" class="text-decoration-none">
+                                                <div
+                                                    class="btn border-0 rounded-0 p-0 d-flex justify-content-center align-items-center">
+                                                    buy now</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- chapter -->
+
+    <section class="chapter bg-green all-padding">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="text-uppercase">Chapter 2</h3>
+            </div>
+            <div class="row">
+                <div class="col-4 wow fadeInLeft">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim venim, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in.</p>
+                </div>
+                <div class="col-4 mt-768-2 wow fadeInUp">
+                    <p class="mb-0">It is a long established fact that a reader will be distracted by the readable
+                        content of a page wh looking at its layout. The point of using Lorem Ipis that it has a
+                        more-or-less normal distribution of letters, as opposed to using ‘Content here, conhere’, making
+                        it look like readable English.</p>
+                </div>
+                <div class="col-4 mt-768-2 wow fadeInRight">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim venim, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in.</p>
+                </div>
+            </div>
+            <div class="img d-flex justify-content-center wow fadeInUp">
+                <img src="img/chepter-sign.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+
+    <section class="about all-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 d-flex align-items-center wow fadeInLeft">
+                    <div class="part">
+                        <h4 class="text-capitalize">“Henry & The Good Dog” – A series of <br> little books, intimate and
+                            grand, funny, <br> searing and visionary.”</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do <br> eiusmod tempor incididunt
+                            Ut
+                            enim ad minim</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do <br> eiusmod tempor incididunt
+                            ut
+                            labore et dolore magna aliqua. <br> Ut enim ad minim venim</p>
+                        <div class="img">
+                            <img src="img/about-sign.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mt-768-1-5 wow fadeInRight">
+                    <div class="img about-img">
+                        <img src="img/about.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cms -->
+
+    <section class="cms bg-gray">
+        <div class="row">
+            <div class="col-6">
+                <div class="img">
+                    <img src="img/cms.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-6 d-flex align-items-center ps-6 wow fadeInRight">
+                <div class="part">
+                    <h3 class="text-uppercase text-white">Awards 2022</h3>
+                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do <br> eiusmod
+                        tempor incididunt Ut
+                        enim ad minim</p>
+                    <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipisi elit, sed do <br> eiusmod
+                        tempor incididunt ut
+                        labore et dolore magna aliqua. <br> Ut enim ad minim venim</p>
+                    <a href="#" class="text-decoration-none">
+                        <div
+                            class="btn btn-main border-0 rounded-0 p-0 d-flex justify-content-center align-items-center">
+                            buy now</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- collection -->
+
+    <section class="collection all-padding">
+        <div class="container">
+            <div class="text-center wow bounceIn">
+                <h3 class="text-uppercase">collection</h3>
+            </div>
+            <div class="row">
+                <div class="col-4 wow fadeInLeft">
+                    <div class="img">
+                        <img src="img/collection-01.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h4>Vally Hills</h4>
+                        <p>By Tmiy Croen</p>
+                    </div>
+                </div>
+                <div class="col-4 wow fadeInUp mt-576-1-5">
+                    <div class="img">
+                        <img src="img/collection-02.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h4>The Journey To Truth</h4>
+                        <p>By Tom Cruse</p>
+                    </div>
+                </div>
+                <div class="col-4 wow fadeInRight mt-768-1-5">
+                    <div class="img">
+                        <img src="img/collection-03.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h4>Nature</h4>
+                        <p>By Mini Roi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- user -->
+
+    <section class="user all-padding bg-green">
+        <div class="container">
+            <div class="row">
+                <div class="owl-carousel owl-theme owl-carousel-2">
+                    <!-- 1 -->
+                    <div class="item">
+                        <div class="row wow fadeInUp">
+                            <div class="col-12 wow fadeInUp">
+                                <div class="img d-flex justify-content-center">
+                                    <img src="img/user-01.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <p>Contrary to popular belief, Lorem Ipsum is not simply of classical Latin
+                                        literature from 45 BC, making it over 2000 a Latin professor at <br>
+                                        Hampden-Sydney College</p>
+                                    <h4 class="mb-0">David D.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="item">
+                        <div class="row wow fadeInUp">
+                            <div class="col-12 wow fadeInUp">
+                                <div class="img d-flex justify-content-center">
+                                    <img src="img/user-02.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <p>Contrary to popular belief, Lorem Ipsum is not simply of classical Latin
+                                        literature from 45 BC, making it over 2000 a Latin professor at <br>
+                                        Hampden-Sydney College</p>
+                                    <h4 class="mb-0">Jessica B.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="item">
+                        <div class="row wow fadeInUp">
+                            <div class="col-12 wow fadeInUp">
+                                <div class="img d-flex justify-content-center">
+                                    <img src="img/user-03.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <p>Contrary to popular belief, Lorem Ipsum is not simply of classical Latin
+                                        literature from 45 BC, making it over 2000 a Latin professor at <br>
+                                        Hampden-Sydney College</p>
+                                    <h4 class="mb-0">Edwin L.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about2 -->
+
+    <section class="about2 all-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 d-grid align-items-center wow fadeInLeft">
+                    <div class="text">
+                        <h5 class="mb-0">In November</h5>
+                        <h3 class="text-uppercase">Author of The Month</h3>
+                        <p class="mb-0">Contrary to popular belief, Lorem Ipsum is of classical Latin literature from 45
+                            BC, ma <br> a Latin professor at College</p>
+                        <a href="#" class="text-decoration-none">
+                            <div class="btn btn-main rounded-0 p-0 d-flex justify-content-center align-items-center">
+                                buy now</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 mt-768-2 wow fadeInUp">
+                    <div class="about-img">
+                        <img src="img/about-2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-4 d-grid align-items-center mt-768-1-5 wow fadeInRight">
+                    <div class="text-down">
+                        <h4 class="text-capitalize">“Henry & The Good Dog” – A series of little books, intimate and
+                            grand, funny, searing and visionary.”</h4>
+                        <p class="mb-0">– Savanna Walker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog -->
+
+    <section class="blog all-padding bg-green">
+        <div class="container">
+            <div class="text-center wow bounceIn">
+                <h3 class="text-uppercase">Our Blog’s</h3>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel owl-theme owl-carousel-3">
+                        <!-- 1 -->
+                        <div class="item wow fadeIn">
+                            <div class="img">
+                                <div class="inner-img">
+                                    <a href="blog1.html"><img src="img/blog-01.jpg" alt="" class="object-fit-cover">
+                                        <div class="orange-box"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="blog-info bg-white">
+                                <p class="color mb-1">04 Oct ,2024</p>
+                                <a href="blog1.html" class="text-decoration-none">
+                                    <h4>Laurie Petrou on editing her debut novel</h4>
+                                </a>
+                                <p class="mb-0">It is a long established fact that will be distracted by the readab.
+                                    Praesent venenatis ultricies erat....</p>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="item wow fadeIn">
+                            <div class="img">
+                                <div class="inner-img">
+                                    <a href="blog2.html"><img src="img/blog-02.jpg" alt="" class="object-fit-cover">
+                                        <div class="orange-box"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="blog-info bg-white">
+                                <p class="color mb-1">04 Oct ,2024</p>
+                                <a href="blog2.html" class="text-decoration-none">
+                                    <h4>“Norte” – The book was sold with the biggest edition</h4>
+                                </a>
+                                <p class="mb-0">It is a long established fact that will be distracted by the readab.
+                                    Quis autem vel eum iure reprehenderit...</p>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="item wow fadeIn">
+                            <div class="img">
+                                <div class="inner-img">
+                                    <a href="blog3.html"><img src="img/blog-03.jpg" alt="" class="object-fit-cover">
+                                        <div class="orange-box"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="blog-info bg-white">
+                                <p class="color mb-1">04 Oct ,2024</p>
+                                <a href="blog3.html" class="text-decoration-none">
+                                    <h4>Tell me who you are, I’ll tell you what to drink</h4>
+                                </a>
+                                <p class="mb-0">It is a long established fact that will be distracted by the readab.
+                                    Nemo enim ipsam voluptatem...</p>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="item wow fadeIn">
+                            <div class="img">
+                                <div class="inner-img">
+                                    <a href="blog4.html"><img src="img/blog-04.jpg" alt="" class="object-fit-cover">
+                                        <div class="orange-box"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="blog-info bg-white">
+                                <p class="color mb-1">04 Oct ,2024</p>
+                                <a href="blog4.html" class="text-decoration-none">
+                                    <h4>Space for effective reading after hours</h4>
+                                </a>
+                                <p class="mb-0">It is a long established fact that will be distracted by the readab.
+                                    Praesent venenatis ultricies erat....</p>
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="item wow fadeIn">
+                            <div class="img">
+                                <div class="inner-img">
+                                    <a href="blog5.html"><img src="img/blog-05.jpg" alt="" class="object-fit-cover">
+                                        <div class="orange-box"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="blog-info bg-white">
+                                <p class="color mb-1">04 Oct ,2024</p>
+                                <a href="blog5.html" class="text-decoration-none">
+                                    <h4>Proin “sit amet turpis lobortis”, imperdiet nisi ut, viverra</h4>
+                                </a>
+                                <p class="mb-0">It is a long established fact that will be distracted by the readab.
+                                    voluptate velit esse quam nihil...</p>
+                            </div>
+                        </div>
+                        <!-- 6 -->
+                        <div class="item wow fadeIn">
+                            <div class="img">
+                                <div class="inner-img">
+                                    <a href="blog6.html"><img src="img/blog-06.jpg" alt="" class="object-fit-cover">
+                                        <div class="orange-box"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="blog-info bg-white">
+                                <p class="color mb-1">04 Oct ,2024</p>
+                                <a href="blog6.html" class="text-decoration-none">
+                                    <h4>Prepare the future for a genius</h4>
+                                </a>
+                                <p class="mb-0">It is a long established fact that will be distracted by the readab.
+                                    Nemo enim ipsam voluptatem quia...</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- update -->
+
+    <section class="update bottom-padding bg-green">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center wow fadeInUp">
+                    <div class="text">
+                        <h3 class="text-uppercase mb-0">Get Update’s</h3>
+                        <P>Newsletter To Get In Touch</P>
+                    </div>
+                    <form id="subscribeForm">
+                        <input type="email" id="email" placeholder="Enter Email"
+                            class="mb-4 border-0 border-bottom border-black text-center" required>
+                        <div class="update-btn d-flex justify-content-center align-items-center">
+                            <button type="submit"
+                                class="btn rounded-0 border-0 text-uppercase text-white bg-main">Subscribe</button>
+                        </div>
+                    </form>
+                    <div id="thanksMessage" class="thanks-message text-center mt-2 text-black" style="display: none;">
+                        Thank you, your sign-up request was successful! Please check your email inbox to confirm.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- order -->
+
+    <section class="order">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-12 d-flex justify-content-center">
+                    <h4 class="mb-0 d-grid align-items-center pe-4">Get 25% Off On Your First Order</h4>
+                    <div class="img">
+                        <img src="img/app.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <section class="footer bg-gray">
+        <div class="container all-padding">
+            <div class="row info">
+
+                <div class="col-3 hide-footer">
+                    <h4 class="text-white">Connect</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item text-white mb-3">Arp-48 Mor Street, Brooklyn, <br> NY 11201, UK</li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">(+1)
+                                585-310-205</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="text-decoration-none">Info@Author.Com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion1 -->
+                <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterOne" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterOne">
+                                    Connect
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterOne" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item text-white mb-3">Arp-48 Mor Street, Brooklyn, <br> NY
+                                            11201, UK</li>
+                                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">(+1)
+                                                585-310-205</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="#"
+                                                class="text-decoration-none">Info@Author.Com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 main-col hide-footer">
+                    <h4 class="text-white">Info</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item"><a href="about.html" class="text-decoration-none">About Us</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">History</a>
+                        </li>
+                        <li class="list-group-item"><a href="faq.html" class="text-decoration-none">Faq</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="blog.html" class="text-decoration-none">Blog</a>
+                        </li>
+                        <li class="list-group-item"><a href="contact.html" class="text-decoration-none">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion2 -->
+                <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterTwo">
+                                    Info
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item"><a href="about.html"
+                                                class="text-decoration-none">About Us</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">History</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="faq.html"
+                                                class="text-decoration-none">Faq</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="blog.html"
+                                                class="text-decoration-none">Blog</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="contact.html"
+                                                class="text-decoration-none">Contact
+                                                Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 hide-footer mb-0">
+                    <h4 class="text-white">Links</h4>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item"><a href="#" class="text-decoration-none text-capitalize">Affiliate
+                                Program</a></li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">Business Services</a>
+                        </li>
+                        <li class="list-group-item my-2"><a href="#" class="text-decoration-none">Education Services</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="text-decoration-none">Gift Car</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- accordion3 -->
+                <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterThree">
+                                    Links
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterThree" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item"><a href="#"
+                                                class="text-decoration-none text-capitalize">Affiliate
+                                                Program</a></li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">Business Services</a>
+                                        </li>
+                                        <li class="list-group-item my-2"><a href="#"
+                                                class="text-decoration-none">Education Services</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Gift
+                                                Car</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 hide-footer mb-0">
+                    <h4 class="text-white">Coming Soon</h4>
+                    <div class="img">
+                        <img src="img/comming-01.jpg" alt="">
+                    </div>
+                    <div class="img mt-4">
+                        <img src="img/comming-02.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- accordion4 -->
+                <div class="col-3 hide-footerr mb-0">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 mb-3"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterFour" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterFour">
+                                    Coming Soon
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-collapseFooterFour" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <div class="img">
+                                        <img src="img/comming-01.jpg" alt="">
+                                    </div>
+                                    <div class="img mt-4">
+                                        <img src="img/comming-02.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <span class="border-top border-footer"></span>
+                <div class="col-12 my-4 d-flex justify-content-center text-white">
+                    <p class="mb-0">© 2024 - Html Theme by Code4rest</p>
+                </div>
+            </div>
+            <div class="fix-btn">
+                <a href="#" class="btn position-fixed rounded-0 border border-1 border-white">
+                    <i class="bi bi-chevron-up text-white"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- all -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- owl-carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- swiper-js -->
+    <script src="js/swiper.js"></script>
+
+    <!-- loader -->
+    <script src="js/loader.js"></script>
+
+    <!-- header -->
+    <script src="js/header.js"></script>
+
+    <!-- custom -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
